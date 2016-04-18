@@ -1,0 +1,2 @@
+#Disable the Startup Chime
+sudo nvram SystemAudioVolume=" "

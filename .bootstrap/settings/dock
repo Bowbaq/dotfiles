@@ -1,0 +1,37 @@
+# Set the icon size of Dock items to 50 pixels
+defaults write com.apple.dock tilesize -int 50
+
+# Enable spring loading for all Dock items
+defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
+
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-process-indicators -bool true
+
+# Wipe all (default) app icons from the Dock
+# This is only really useful when setting up a new Mac, or if you don’t use
+# the Dock to launch apps.
+defaults write com.apple.dock persistent-apps -array
+
+# Don’t animate opening applications from the Dock
+defaults write com.apple.dock launchanim -bool false
+
+# Disable Dashboard
+defaults write com.apple.dashboard mcx-disabled -bool true
+
+# Don’t show Dashboard as a Space
+defaults write com.apple.dock dashboard-in-overlay -bool true
+
+# Don't utomatically hide and show the Dock
+defaults write com.apple.dock autohide -bool false
+
+# Position the dock to the right
+defaults write com.apple.dock orientation -string "right"
+
+# Switch to 2D mode
+defaults write com.apple.dock no-glass -boolean true
+
+# Enable magnification
+defaults write com.apple.dock magnification -boolean true
+defaults write com.apple.dock largesize -float 75
+
+killall Dock

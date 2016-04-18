@@ -1,11 +1,25 @@
+**Note:**
+
+* It is assumed that you have read and understood the contents of SUPPORT.md
+* You may need to restart Sublime Text after GoSublime updates
+* If you use the `fmt_cmd` setting with `goimports` or any other slow command
+   you should read and understand the `ipc_timeout` setting documented in `GoSublime.sublime-settings`
+
+
 GoSublime Changes
 -----------------
 
+## 16.04.08-2
+	* If you use the `fmt_cmd` setting with `goimports` or any other slow command
+        you should read and understand the `ipc_timeout` setting documented in `GoSublime.sublime-settings`
 
-** Please be aware that go1 is no longer supported. The minimum supported version is go1.1.2 **
+## 16.04.08-1
+	* added a new SUPPORT.md file calrify what level of support can be expected from use of GoSublime
+	* you are advised to reach and understand its contents
 
-
-Note: you may need to restart Sublime Text after GoSublime updates
+## 16.03.22-1
+	* add new pseudo env var _dir (`dirname($_fn)`) and do env var substitution on fmt_cmd
+	* use `"fmt_cmd": ["goimports", "-srcdir", "$_dir"]` for newer version of goimports
 
 ## 16.01.09-1
 	* Output GOROOT and GOPATH to the ST console when they change

@@ -1,0 +1,55 @@
+# Expand save panel by default
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
+defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
+
+# Expand print panel by default
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
+defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
+
+# Automatically quit printer app once the print jobs complete
+defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+
+# Disable the “Are you sure you want to open this application?” dialog
+defaults write com.apple.LaunchServices LSQuarantine -bool false
+
+# Disable Resume system-wide
+defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+rm /Users/bowbaq/Library/Preferences/ByHost/com.apple.loginwindow.*
+
+# Disable Notification Center and remove the menu bar icon
+launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+
+# Disable smart quotes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+
+# Disable smart dashes as they’re annoying when typing code
+defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+
+# Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
+# all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
+osascript -e 'tell application "System Events" to set picture of every desktop to ("/Library/Desktop Pictures/Blue Pond.jpg" as POSIX file as alias)'
+
+# Set the timezone; see `sudo systemsetup -listtimezones` for other values
+sudo systemsetup -settimezone "America/New_York" > /dev/null
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+# Save screenshots to the desktop
+defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+
+# Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
+# Disable shadow in screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+
+# Enable subpixel font rendering on non-Apple LCDs
+defaults write NSGlobalDomain AppleFontSmoothing -int 2
+
+# Enable HiDPI display modes (requires restart)
+sudo defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
