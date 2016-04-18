@@ -20,7 +20,7 @@ if [ ! -d "$HOME/.oh-my-zsh"]; then
 else
   echo ''
   echo '##### Updating oh-my-zsh'
-  upgrade_oh_my_zsh
+  env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
 fi
 
 # install brew taps, needs to be fixed properly later
