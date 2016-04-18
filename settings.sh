@@ -248,9 +248,7 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
 # Set a custom wallpaper image. `DefaultDesktop.jpg` is already a symlink, and
 # all wallpapers are in `/Library/Desktop Pictures/`. The default is `Wave.jpg`.
-rm -rf ~/Library/Application\ Support/Dock/desktoppicture.db
-sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
-sudo ln -s /Library/Desktop\ Pictures/Blue\ Pond.jpg /System/Library/CoreServices/DefaultDesktop.jpg
+osascript -e 'tell application "System Events" to set picture of every desktop to ("/Library/Desktop Pictures/Blue Pond.jpg" as POSIX file as alias)'
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "America/New_York" > /dev/null
