@@ -1,10 +1,17 @@
 set -ex
 
-# Install Homebrew (http://brew.sh)
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-# Update Homebrew
-brew update
+# install homebrew
+`which -s brew`
+if [[ $? != 0 ]]; then
+    echo ''
+    echo '##### Installing Homebrew'
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    echo ''
+    echo '##### Updating & hecking homebrew installation'
+    brew update
+    brew doctor
+fi
 
 # Install oh-my-zsh to beautify and manage zsh
 curl -L http://install.ohmyz.sh | sh
