@@ -24,15 +24,19 @@ else
 fi
 
 # install brew taps, needs to be fixed properly later
-for TAP in "$(cat Taps | grep -v "#")"; do
+for TAP in $(grep . Taps | grep -v "#"); do
   brew tap "$TAP"
 done
 
 # Install brews
-brew install $(cat Brewfile | grep -v "#")
+for BREW in $(grep . Brewfile | grep -v "#"); do
+  brew install "$BREW"
+done
 
 # Install casks
-brew cask install $(cat Caskfile | grep -v "#")
+for CASK in $(grep . Caskfile | grep -v "#"); do
+  brew cask install "$CASK"
+done
 brew cask alfred link
 brew cleanup; brew cask cleanup
 
