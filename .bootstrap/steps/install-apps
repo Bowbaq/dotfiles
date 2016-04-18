@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -ex
+
+for CASK in $(grep . Caskfile | grep -v "#"); do
+  brew cask install "$CASK"
+done
+brew cleanup
+brew cask cleanup

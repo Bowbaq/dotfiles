@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -ex
+
+`which -s brew`
+if [[ $? != 0 ]]; then
+    echo ''
+    echo '##### Installing Homebrew'
+    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+    echo ''
+    echo '##### Updating & checking homebrew installation'
+    brew update
+    brew doctor
+fi

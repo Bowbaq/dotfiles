@@ -18,11 +18,11 @@ sublime-text3
 ## Desktop
 # Proper screen ligthing
 flux
+bettertouchtool
 # QuickLook plugins
 qlcolorcode qlstephen qlmarkdown quicklook-json betterzipql suspicious-package
 # OSX tweaks
 caffeine
-rightzoom
 
 ## Media
 # Video player

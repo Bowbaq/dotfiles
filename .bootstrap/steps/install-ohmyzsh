@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -ex
+
+if [ ! -d "$HOME/.oh-my-zsh"]; then
+  echo ''
+  echo '##### Installing oh-my-zsh'
+  curl -L http://install.ohmyz.sh | sh
+else
+  echo ''
+  echo '##### Updating oh-my-zsh'
+  env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
+fi

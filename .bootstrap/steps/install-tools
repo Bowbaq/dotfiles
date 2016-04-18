@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ex
+
+for BREW in $(grep . Brewfile | grep -v "#"); do
+  brew install "$BREW"
+done

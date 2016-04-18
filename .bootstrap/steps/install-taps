@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ex
+
+for TAP in $(grep . Taps | grep -v "#"); do
+  brew tap "$TAP"
+done
