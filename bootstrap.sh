@@ -15,6 +15,8 @@ brew install $(cat Brewfile|grep -v "#")
 
 # Install casks
 brew cask install $(cat Caskfile|grep -v "#")
+brew cask alfred link
+brew cleanup; brew cask cleanup
 
 # Set standard settings
 source 'settings.sh'

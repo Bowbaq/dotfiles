@@ -6,7 +6,7 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+ZSH_THEME="candy"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -49,7 +49,7 @@ ZSH_THEME="ys"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew brew-cask history-substring-search)
+plugins=(osx git brew brew-cask autojump sublime heroku npm pip vagrant scala golang)
 
 source $ZSH/oh-my-zsh.sh
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -73,30 +73,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-source $(brew --prefix nvm)/nvm.sh
-eval "$(docker-machine env local 2>/dev/null)"
-
-#bindkey "\e[1~" beginning-of-line
-#bindkey "\e[4~" end-of-line
-
-# Skip forward/back a word with opt-arrow
-bindkey '[C' forward-word
-bindkey '[D' backward-word
-
-# Skip to start/end of line with cmd-arrow
-bindkey '[E' beginning-of-line
-bindkey '[F' end-of-line
-
-# Delete word with opt-backspace/opt-delete
-bindkey '[G' backward-kill-word
-bindkey '[H' kill-word
-
-# Delete line with cmd-backspace
-bindkey '[I' kill-whole-line
-
-# added by travis gem
-[ -f /Users/jonas/.travis/travis.sh ] && source /Users/jonas/.travis/travis.sh
-source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/opt/homebrew-cask/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-
 export PATH="/usr/local/sbin:$PATH"
+
+# Golang
+export GOPATH=/Users/bowbaq/Dropbox/Dev/go
+export GOROOT=`go env GOROOT`
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin

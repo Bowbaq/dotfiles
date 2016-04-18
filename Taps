@@ -1,11 +1,8 @@
 ## brew cask and more versions of casks
 caskroom/versions
 
-## Add tap for Pivotal
-pivotal/tap
+## more versions of brew kegs
+homebrew/versions
 
-## Tap for packer
-homebrew/binary
-
-## Tap for tmate
-nviennot/tmate
+## manage services installed with homebrew
+homebrew/services
