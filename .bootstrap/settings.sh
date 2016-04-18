@@ -236,6 +236,7 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Disable Resume system-wide
 defaults write com.apple.systempreferences NSQuitAlwaysKeepsWindows -bool false
+rm /Users/bowbaq/Library/Preferences/ByHost/com.apple.loginwindow.*
 
 # Disable Notification Center and remove the menu bar icon
 launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
