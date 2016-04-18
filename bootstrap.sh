@@ -13,8 +13,15 @@ else
     brew doctor
 fi
 
-# Install oh-my-zsh to beautify and manage zsh
-curl -L http://install.ohmyz.sh | sh
+if [ ! -d "$HOME/.oh-my-zsh"]; then
+  echo ''
+  echo '##### Installing oh-my-zsh'
+  curl -L http://install.ohmyz.sh | sh
+else
+  echo ''
+  echo '##### Updating oh-my-zsh'
+  upgrade_oh_my_zsh
+fi
 
 # install brew taps, needs to be fixed properly later
 while read in; do brew tap "$in"; done < Taps
