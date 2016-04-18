@@ -2,6 +2,8 @@
 
 # From https://github.com/caskroom/homebrew-cask/issues/309#issuecomment-17972519 by vitorgalvao
 
+set -ex
+
 brew cask update
 
 caskApps=$(ls /opt/homebrew-cask/Caskroom/) # Lists the casks in the Caskroom

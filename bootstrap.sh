@@ -1,4 +1,4 @@
-set -e
+set -ex
 
 # Install Homebrew (http://brew.sh)
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -13,10 +13,10 @@ curl -L http://install.ohmyz.sh | sh
 while read in; do brew tap "$in"; done < Taps
 
 # Install brews
-brew install $(cat Brewfile|grep -v "#")
+brew install $(cat Brewfile | grep -v "#")
 
 # Install casks
-brew cask install $(cat Caskfile|grep -v "#")
+brew cask install $(cat Caskfile | grep -v "#")
 brew cask alfred link
 brew cleanup; brew cask cleanup
 

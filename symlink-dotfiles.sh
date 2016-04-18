@@ -1,6 +1,8 @@
 #!/bin/bash
 # Most of this is from https://github.com/paulmillr/dotfiles/blob/master/symlink-dotfiles.sh
 
+set -ex
+
 dotfiles="$HOME/.osx-bootstrap/dotfiles"
 
 if [[ -d "$dotfiles" ]]; then
