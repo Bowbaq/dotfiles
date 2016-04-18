@@ -3,6 +3,8 @@
 # and
 # https://github.com/paulmillr/dotfiles/blob/master/etc/osx.sh
 
+set -e
+
 # Ask for the administrator password upfront
 sudo -v
 
