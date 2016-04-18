@@ -24,7 +24,9 @@ else
 fi
 
 # install brew taps, needs to be fixed properly later
-while read in; do brew tap "$in"; done < Taps
+for TAP in "$(cat Taps | grep -v "#")"; do
+  brew tap "$TAP"
+done
 
 # Install brews
 brew install $(cat Brewfile | grep -v "#")
