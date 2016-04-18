@@ -1,0 +1,19 @@
+[user]
+	name = Maxime Bury
+	email = maxime.bury@gmail.com
+[help]
+	autocorrect = 1
+[color]
+	ui = true
+[core]
+	autocrlf = input
+	excludesfile = /Users/bowbaq/.gitignore_global
+[merge]
+	tool = opendiff
+	defaultToUpstream = true
+[push]
+	default = upstream
+[mergetool]
+	keepBackup = true
+[credential]
+	helper = osxkeychain
