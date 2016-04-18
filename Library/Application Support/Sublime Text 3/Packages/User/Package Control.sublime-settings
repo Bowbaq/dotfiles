@@ -1,0 +1,21 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Alignment",
+		"All Autocomplete",
+		"Better CoffeeScript",
+		"Fix Mac Path",
+		"GoSublime",
+		"INI",
+		"Package Control",
+		"Pretty JSON",
+		"SCSS",
+		"SideBarEnhancements",
+		"SublimeSBT",
+		"Terraform"
+	]
+}

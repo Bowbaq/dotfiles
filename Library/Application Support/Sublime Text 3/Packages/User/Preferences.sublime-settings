@@ -1,0 +1,71 @@
+{
+	"bold_folder_labels": true,
+	"comma": "fix",
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.tmp",
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.mo",
+		"*.ttf",
+		"*.swf",
+		"*.gz",
+		"*.m4v",
+		"jasmine.output.html",
+		"Gemfile.lock",
+		"gin-bin",
+		".css$:.css"
+	],
+	"folder_exclude_patterns":
+	[
+		".git",
+		".svn",
+		".vagrant",
+		".settings",
+		"target",
+		".jhw-cache",
+		".idea",
+		".idea_modules",
+		".mocha",
+		"node_modules",
+		"logs",
+		".target",
+		".sass-cache",
+		"Godeps"
+	],
+	"font_options": "subpixel_antialias",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"remember_open_files": false,
+	"rulers":
+	[
+		110
+	],
+	"save_on_focus_lost": true,
+	"scroll_past_end": true,
+	"show_minimap": false,
+	"tab_size": 2,
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true
+}

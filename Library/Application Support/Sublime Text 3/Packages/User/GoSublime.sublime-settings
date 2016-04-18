@@ -1,0 +1,6 @@
+{
+    "fmt_cmd": ["goimports"],
+    "env": {
+      "GOPATH": "/Users/bowbaq/Dropbox/Dev/go"
+    }
+}
