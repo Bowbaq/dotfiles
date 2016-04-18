@@ -186,6 +186,9 @@ defaults write com.apple.dock dashboard-in-overlay -bool true
 # Don't utomatically hide and show the Dock
 defaults write com.apple.dock autohide -bool false
 
+# Position the dock to the right
+defaults write com.apple.dock orientation -string "right"
+
 # Terminal
 # ========
 
