@@ -37,7 +37,6 @@ done
 for CASK in $(grep . Caskfile | grep -v "#"); do
   brew cask install "$CASK"
 done
-brew cask alfred link
 brew cleanup; brew cask cleanup
 
 # Set standard settings
