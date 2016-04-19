@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -x
+
+# ensure FileVault is active
+`sudo fdesetup isactive`
+if [[ $? != 0 ]]; then
+    echo ''
+    read -p "##### Do you want to enable Disk Encryption? [Yn]" -n 1 -r
+    if [[ $REPLY =~ ^[Yy]$ ]]; then
+        echo ''
+        sudo fdesetup enable -user bowbaq -outputplist > "$HOME/Desktop/recovery-key.plist"
+    else
+        echo ''
+    fi
+fi

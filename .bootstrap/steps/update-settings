@@ -2,12 +2,23 @@
 
 set -x
 
+autostart_hidden() {
+  for app; do
+    echo "Autostart: $app"
+    osascript -e "tell application \"System Events\" to make login item at end with properties {path:\"/Applications/$app.app\", hidden:true}" > /dev/null
+  done
+}
+
 # Ask for the administrator password upfront
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `.osx` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+killall System\ Preferences
+
 for FILE in settings/*; do
   source "$FILE"
 done
+
+autostart_hidden "Caffeine" "Flux" "Dropbox" "Alfred 2"

@@ -2,9 +2,24 @@
 
 set -ex
 
+run_app() {
+  for APP; do
+    if test "$(osascript -e "tell application \"System Events\" to (name of processes) contains \"$APP\"")" = "false"; then
+      open -a "$APP"
+    fi
+  done
+}
+
 ./steps/install-brew
 ./steps/install-ohmyzsh
 ./steps/install-taps
 ./steps/install-tools
 ./steps/install-apps
 ./steps/update-settings
+./steps/setup-fde
+
+for APP in "Activity Monitor" "cfprefsd" "Dock" "Finder" "Google Chrome" "SystemUIServer"; do
+  killall "$APP" &> /dev/null || true
+done
+
+run_app "Caffeine" "Flux" "Dropbox" "Alfred 2"

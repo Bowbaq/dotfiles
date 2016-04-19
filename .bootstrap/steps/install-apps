@@ -3,7 +3,7 @@
 set -ex
 
 for CASK in $(grep . Caskfile | grep -v "#"); do
-  brew cask install "$CASK"
+  brew cask install --appdir=/Applications $CASK
 done
 brew cleanup
 brew cask cleanup

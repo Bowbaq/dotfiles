@@ -8,6 +8,7 @@
 [core]
 	autocrlf = input
 	excludesfile = /Users/bowbaq/.gitignore_global
+	attributesfile = /Users/bowbaq/.gitattributes
 [merge]
 	tool = opendiff
 	defaultToUpstream = true
@@ -17,3 +18,5 @@
 	keepBackup = true
 [credential]
 	helper = osxkeychain
+[diff "plist"]
+	textconv = plutil -convert xml1 -o -

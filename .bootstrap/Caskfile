@@ -15,15 +15,18 @@ virtualbox
 # Text editing
 sublime-text3
 
-## Desktop
-# Proper screen ligthing
+## OS Tweaks
 flux
-bettertouchtool
 istat-menus
-# QuickLook plugins
-qlcolorcode qlstephen qlmarkdown quicklook-json betterzipql suspicious-package
-# OSX tweaks
 caffeine
+
+# QuickLook plugins
+qlcolorcode
+qlstephen
+qlmarkdown
+quicklook-json
+betterzipql
+suspicious-package
 
 ## Media
 # Video player
@@ -34,8 +37,8 @@ sonos
 spotify
 
 ## Social
-# Skype
 skype
+slack
 
 ## Storage
 # Online storage
