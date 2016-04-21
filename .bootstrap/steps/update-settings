@@ -21,4 +21,4 @@ for FILE in settings/*; do
   source "$FILE"
 done
 
-autostart_hidden "Caffeine" "Flux" "Dropbox" "Alfred 2"
+autostart_hidden "KeepingYouAwake" "Flux" "Dropbox" "Alfred 2"

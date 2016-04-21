@@ -1,0 +1,11 @@
+# Enable Firewall. Possible values:
+# 0 = off
+# 1 = on for specific services
+# 2 = on for essential services
+sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+
+# Enable Stealth mode.
+sudo defaults write /Library/Preferences/com.apple.alf stealthenabled -bool true
+
+# Enable Firewall logging.
+sudo defaults write /Library/Preferences/com.apple.alf loggingenabled -bool true
