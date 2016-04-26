@@ -13,6 +13,7 @@ graphviz
 jq
 ssh-copy-id
 tree
+awscli
 
 ## Shell stuff
 zsh
