@@ -5,5 +5,14 @@ set -ex
 for CASK in $(grep . Caskfile | grep -v "#"); do
   brew cask install --appdir=/Applications $CASK
 done
+
+if [ "$OSX_VERSION" == "10.9" ]; then {
+  brew cask install --appdir=/Applications caffeine rightzoom
+}
+
+if [ "$OSX_VERSION" == "10.10" ]; then {
+  brew cask install --appdir=/Applications keepingyouawake
+}
+
 brew cleanup
 brew cask cleanup

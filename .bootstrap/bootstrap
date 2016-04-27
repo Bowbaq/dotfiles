@@ -2,6 +2,8 @@
 
 set -ex
 
+export OSX_VERSION=$(sw_vers -productVersion | awk -F '.' '{print $1 "." $2}')
+
 run_app() {
   for APP; do
     if test "$(osascript -e "tell application \"System Events\" to (name of processes) contains \"$APP\"")" = "false"; then
@@ -22,4 +24,14 @@ for APP in "Activity Monitor" "cfprefsd" "Dock" "Finder" "Google Chrome" "System
   killall "$APP" &> /dev/null || true
 done
 
-run_app "KeepingYouAwake" "Flux" "Dropbox" "Alfred 2" "InsertPic"
+for APP in "Flux" "Dropbox" "Alfred 2" "InsertPic"; do
+  run_app "$APP" || true
+done
+
+if [ "$OSX_VERSION" == "10.9" ]; then {
+  run_app "Caffeine" "RightZoom" || true
+}
+
+if [ "$OSX_VERSION" == "10.10" ]; then {
+ run_app "KeepingYouAwake" || true
+}

@@ -1,8 +1,8 @@
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "bowbaq-originate"
-sudo scutil --set HostName "bowbaq-originate"
-sudo scutil --set LocalHostName "bowbaq-originate"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "bowbaq-originate"
+sudo scutil --set ComputerName "bowbaq-home"
+sudo scutil --set HostName "bowbaq-home"
+sudo scutil --set LocalHostName "bowbaq-home"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "bowbaq-home"
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
