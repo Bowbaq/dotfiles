@@ -14,7 +14,7 @@ docker
 
 ## Coding
 # Text editing
-sublime-text3
+sublime-text
 
 ## OS Tweaks
 flux
@@ -30,8 +30,6 @@ betterzipql
 ## Media
 # Video player
 vlc
-# Sonos music manager
-sonos
 # Spotify player
 spotify
 

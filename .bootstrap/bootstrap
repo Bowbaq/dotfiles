@@ -12,11 +12,11 @@ run_app() {
   done
 }
 
-./steps/install-brew
-./steps/install-ohmyzsh
-./steps/install-taps
-./steps/install-tools
-./steps/install-apps
+# ./steps/install-brew
+# ./steps/install-ohmyzsh
+# ./steps/install-taps
+# ./steps/install-tools
+# ./steps/install-apps
 ./steps/update-settings
 ./steps/setup-fde
 
@@ -28,10 +28,10 @@ for APP in "Flux" "Dropbox" "Alfred 2" "InsertPic"; do
   run_app "$APP" || true
 done
 
-if [ "$OSX_VERSION" == "10.9" ]; then {
+if [ "$OSX_VERSION" == "10.9" ]; then
   run_app "Caffeine" "RightZoom" || true
-}
+fi
 
-if [ "$OSX_VERSION" == "10.10" ]; then {
+if [ "$OSX_VERSION" == "10.10" ]; then
  run_app "KeepingYouAwake" || true
-}
+fi
