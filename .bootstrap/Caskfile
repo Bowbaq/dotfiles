@@ -10,6 +10,7 @@ alfred
 # Virtualization
 vagrant
 virtualbox
+docker
 
 ## Coding
 # Text editing
@@ -41,6 +42,8 @@ slack
 ## Storage
 # Online storage
 dropbox
+# Notes
+evernote
 
 ## Misc
 insertpic
