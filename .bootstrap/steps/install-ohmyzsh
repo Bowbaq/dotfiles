@@ -6,7 +6,7 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
   echo '##### Installing oh-my-zsh'
   curl -L http://install.ohmyz.sh | sh
 
-  git checkout -- .zshrc
+  mv .zshrc.pre-oh-my-zsh .zshrc
 else
   echo '##### Updating oh-my-zsh'
   env ZSH=$ZSH /bin/sh $ZSH/tools/upgrade.sh
