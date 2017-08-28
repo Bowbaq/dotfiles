@@ -1,6 +1,6 @@
 [user]
 	name = Maxime Bury
-	email = maxime.bury@gmail.com
+	email = maxime.bury+github@gmail.com
 [help]
 	autocorrect = 1
 [color]
@@ -20,3 +20,14 @@
 	helper = osxkeychain
 [diff "plist"]
 	textconv = plutil -convert xml1 -o -
+[alias]
+	append = town append
+	hack = town hack
+	kill = town kill
+	new-pull-request = town new-pull-request
+	prepend = town prepend
+	prune-branches = town prune-branches
+	rename-branch = town rename-branch
+	repo = town repo
+	ship = town ship
+	sync = town sync
